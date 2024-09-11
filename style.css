@@ -1,0 +1,102 @@
+#toolbar {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 4px 0 0;
+}
+.button:hover {
+    background-color: #c0c0c0;
+}
+.button .tooltip {
+    width: 120px;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s 0.7s;
+    position: absolute;
+    z-index: 1;
+    margin-top: 24px;
+}  
+.button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.button-selected {
+    background-color: #c0c0c0;
+}
+#preview {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 103px;
+}
+#preview > canvas {
+    border: thin dashed lightgray;
+    margin: 0;
+    padding: 0;
+}
+#clipboard {
+    margin: 0;
+    background-color: transparent;
+}
+.clipboard-popup {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin-bottom: -42px;
+}
+#bitmap > canvas {
+    border: thin solid lightgray;
+    margin: 0;
+    padding: 0;
+}
+#hexcode {
+    margin-top: 16px;
+}
+#hexcode-toolbar {
+    margin-bottom: 4px;
+    vertical-align: bottom;
+}
+#hexcode-text {
+    display: flex;
+    align-items: end;
+}
+#hexcode-text > input {
+    height: 24px;
+    margin: 0;
+    padding: 0.125rem;
+}
+@keyframes popup-keyframes {
+    from  { opacity: 0; }
+    15%   { opacity: 1; }
+    85%   { opacity: 1; }
+    to    { opacity: 0; }
+}
+.popup {
+    visibility: hidden;
+    opacity: 0;
+}
+.popup-anim {
+    visibility: visible;
+    animation-name: popup-keyframes;
+    animation-duration: 2s;
+}
